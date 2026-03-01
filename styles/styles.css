@@ -11,6 +11,7 @@ body {
 }
 
 .bg-guy {
+    position: relative;
     background-image: url(../resources/guy.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,24 +24,22 @@ body {
 }
 
 .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     width: 100%;
-    max-width: 1150px;
-    box-sizing: border-box;
-
-    margin: 0 auto;
-
-    margin-bottom: 250px;
-    padding-top: 10px;
+    padding-top: 27px;
 
     text-align: left;
     font-size: 0;
 }
 
 .logo {
-    display: inline-block;
+    display: block;
     width: 130px;
-    vertical-align: middle;
-    padding-top: 27px;
+
+    margin-left: 125px;
 }
 
 .logo__bg {
@@ -62,21 +61,24 @@ body {
 }
 
 .nav {
-    display: inline-block;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
     box-sizing: border-box;
-    width: 500px;
-    margin-left: 520px;
-    text-align: center;
+    margin-right: 125px;
+    width: 100%;
+    max-width: 515px;
+    height: 40px;
+}
 
-    vertical-align: middle;
-
+.burger-btn {
+    display: none;
+    visibility: hidden;
 }
 
 .nav__link {
-    display: inline-block;
+    display: block;
     text-decoration: none;
-
-    margin-right: 50px;
 
     font-size: 18px;
     letter-spacing: -0.54px;
@@ -84,23 +86,23 @@ body {
     color: white;
 }
 
-.nav__link:nth-last-child(1) {
-    margin-right: 0px;
-}
 .nav__link:hover {
     color: #1BFF07;
 }
 
 .main {
+    position: absolute;
+    left: 120px;
+    top: 330px;
+
     width: 100%;
-    max-width: 1150px;
+    max-width: 920px;
 
     margin: 0 auto;
 }
 
 .about {
     margin-bottom: 30px;
-    padding-top: 5px;
     color: white;
     font-size: 20px;
     letter-spacing: -0.6px;
@@ -130,6 +132,7 @@ body {
     max-width: 1150px;
 
     margin: 0 auto;
+    margin-bottom: 150px;
 }
 
 .projects__title {
@@ -141,11 +144,44 @@ body {
     line-height: normal;
 }
 
-.project__card-realhome {
-    background-image: url(../resources/realhome.png);
-    height: 550px;
-
+.project__card-metrika {
     position: relative;
+    border-radius: 30px;
+    height: 550px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.90) 100%), url(../resources/metrika.png) lightgray 50% / cover no-repeat;
+}
+
+.project__card-nothing {
+    position: relative;
+    border-radius: 30px;
+    height: 550px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.90) 100%), url(../resources/nothing.png) lightgray 50% / cover no-repeat;
+}
+
+.project__card-toptrip {
+    position: relative;
+    border-radius: 30px;
+    height: 550px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.90) 100%), url(../resources/toptrip.png) lightgray 50% / cover no-repeat;
+}
+
+.project__label-wrapper {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    border-radius: 100px;
+    background: #1BFF07;
+}
+
+.project__label {
+    padding: 10px 20px;
+
+    font-size: 20px;
+    line-height: normal;
+    letter-spacing: -0.6px;
 }
 
 .card__title {
@@ -156,7 +192,7 @@ body {
     left: 50px;
     bottom: 95px;
     letter-spacing: -1px;
-
+    line-height: normal;
     margin-bottom: 5px;
 }
 
@@ -167,22 +203,8 @@ body {
     position: absolute;
     left: 50px;
     bottom: 50px;
-
+    line-height: normal;
     letter-spacing: -1px;
-}
-
-.project__card-glass {
-    background-image: url(../resources/glass.png);
-    height: 550px;
-
-    position: relative;
-}
-
-.project__card-fesiyen {
-    background-image: url(../resources/fesiyen.png);
-    height: 550px;
-
-    position: relative;
 }
 
 .projects__button {
@@ -195,7 +217,6 @@ body {
 
     border-radius: 10px;
     margin-top: 80px;
-    margin-bottom: 150px;
 }
 
 .projects-button__link {
@@ -208,7 +229,6 @@ body {
     letter-spacing: -1px;
 
     width: 580px;
-    height: 150px;
 
     padding-top: 60px;
 }
@@ -226,22 +246,26 @@ body {
     max-width: 1150px;
 
     margin: 0 auto;
+    margin-bottom: 150px;
+}
 
+.competencies__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 45px;
 }
 
 .competencies__title {
     color: white;
     font-size: 55px;
     letter-spacing: -1.65px;
-
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     line-height: normal;
 }
 
 .competencies__card {
-    width: 778px;
+    width: 535px;
 
-    margin-bottom: 60px;
 }
 
 .competencies-card__title {
@@ -250,8 +274,8 @@ body {
 
     letter-spacing: -1px;
     line-height: normal;
-    margin-bottom: 15px;
 
+    margin-top: 15px;
 }
 
 .competencies-card__descripton {
@@ -259,8 +283,12 @@ body {
     font-size: 22px;
     line-height: normal;
     letter-spacing: -0.65px;
-    max-height: 145px;
-    width: 778px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.competencies-card__descriptonーuniq {
+    margin-top: 55px;
 }
 
 .html::before {
@@ -273,9 +301,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
-
-    margin-bottom: 12px;
-    margin-top: 48px;
 }
 
 .js::before {
@@ -288,9 +313,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
-
-    margin-bottom: 16px;
-    margin-top: 60px;
 }
 
 .lib::before {
@@ -303,9 +325,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
-
-    margin-bottom: 16px;
-    margin-top: 60px;
 }
 
 .adaptive::before {
@@ -318,9 +337,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
-
-    margin-bottom: 16px;
-    margin-top: 60px;
 }
 
 .services {
@@ -332,8 +348,7 @@ body {
 
 .service__title {
     width: 403px;
-    margin-top: 150px;
-    margin-bottom: 75px;
+    margin-bottom: 80px;
 
     color: white;
     font-size: 35px;
@@ -342,11 +357,7 @@ body {
 }
 
 .service__card {
-    margin-bottom: 74px;
-}
-
-.service__card:nth-last-child(2) {
-    margin-bottom: 137px;
+    margin-bottom: 40px;
 }
 
 .service__card:nth-last-child(1) {
@@ -355,10 +366,15 @@ body {
 
 .service-card__image {
     height: 200px;
-    width: 1150px;
+    width: 100%;
+    max-width: 1150px;
 }
 
 .service__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: row;
     box-sizing: border-box;
 
     background: #191C19;
@@ -369,24 +385,25 @@ body {
     height: 285px;
 
     padding-left: 40px;
-    
+    padding-top: 40px;
+    padding-right: 45px;
 }
 
 .service-text__title {
-    padding-top: 40px;
-    padding-bottom: 15px;
     color: #1BFF07;
     font-size: 55px;
     letter-spacing: -1.65px;
     line-height: normal;
+    max-width: 470px;
 }
+
 .servce-text__description {
     color: white;
     font-size: 22px;
     letter-spacing: -0.66px;
 
     line-height: normal;
-    max-width: 750px;
+    max-width: 525px;
 }
 
 .contacts {
@@ -394,45 +411,100 @@ body {
     box-sizing: border-box;
     border-radius: 30px;
     background: #191C19;
+
     width: 100%;
     height: 717px;
-    padding-left: 125px;
 
-    margin-bottom: 150px;
+    margin-bottom: 10px;
 }
 
 .contacts__block {
-    padding-top: 320px;
+    padding-top: 100px;
+    max-width: 570px;
+    padding-left: 125px;
 }
 
 .contacts__title {
-    color: white;
-    font-size: 35px;
-    line-height: 60px;
-    letter-spacing: -1px;
-
-    margin-bottom: 28px;
-}
-
-.contacts__link {
-    color: white;
+    color: #FFF;
     font-size: 60px;
     line-height: 60px;
-    letter-spacing: -2px;
-    margin-bottom: 20px;
+    letter-spacing: -1.8px;
+    max-width: 553px;
+    margin-bottom: 60px;
+}
 
+.contacts__form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    margin-top: 60px;
+}
+
+.contacts__form-name {
+    width: 500px;
+}
+
+.form-name {
+    width: 565px;
+    height: 60px;
+    box-sizing: border-box;
+    border-radius: 100px;
+    padding-left: 40px;
+
+    background: #3B3D3B;
+
+    color: #FFF;
+    font-family: "IBM Plex Mono";
+    font-size: 22px;
+    line-height: normal;
+    letter-spacing: -0.66px;
+
+    border: none;
+    outline: none;
+}
+
+.contacts__form-email {
+    width: 500px;
+}
+
+.form-email {
+    width: 565px;
+    height: 60px;
+    border-radius: 100px;
+    padding-left: 40px;
+    box-sizing: border-box;
+
+    background: #3B3D3B;
+
+    color: #FFF;
+    font-family: "IBM Plex Mono";
+    font-size: 22px;
+    line-height: normal;
+    letter-spacing: -0.66px;
+
+    border: none;
+    outline: none;
+}
+
+.contacts__form-btn {
+    width: 450px;
+    height: 70px;
+    margin-top: 60px;
+
+    color: #000;
+    text-align: center;
+    font-family: "IBM Plex Mono";
+    font-size: 22px;
+    line-height: normal;
+    letter-spacing: -0.66px;
     text-decoration: none;
-    display: block;
-    width: fit-content;
-    
-}
 
-.contacts__link:nth-last-child(1) {
-    margin-bottom: 0;
-}
-
-.contacts__link:hover {
-    color: #1BFF07;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background: #1BFF07;
 }
 
 .contacts__image {
@@ -451,22 +523,682 @@ body {
 }
 
 .footer {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    padding-top: 75px;
     padding-left: 125px;
 }
 
+.footer__info {
+    margin-bottom: 25px;
+}
+
 .footer__title {
-    padding-top: 76px;
+    max-width: 515px;
     margin-bottom: 66px;
+
+    color: #000;
+    font-family: Manrope;
     font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
     line-height: normal;
-    letter-spacing: -0,66px;
+    letter-spacing: -0.66px;
 }
 
 .footer__description {
-    padding-bottom: 20px;
+    color: #000;
+    font-family: Manrope;
     font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
     line-height: normal;
     letter-spacing: -0.6px;
 
     opacity: 0.5;
+}
+
+.footer__links {
+    max-width: 275px;
+}
+
+.footer__links-list {
+    display: flex;
+    gap: 24px;
+}
+
+.footer__link {
+    text-decoration: none;
+
+    color: #000;
+    font-family: Manrope;
+    font-size: 22px;
+    line-height: normal;
+    letter-spacing: -0.66px;
+    cursor: pointer;
+}
+
+.footer__link:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+.footer__links-text {
+    color: #000;
+    font-family: Manrope;
+    font-size: 20px;
+    line-height: normal;
+    letter-spacing: -0.6px;
+    margin-top: 60px;
+    margin-left: 15px;
+    opacity: 0.5;
+}
+
+@media (max-width: 1149px) {
+    .logo {
+        margin-left: 15px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .burger-btn {
+        margin-right: 15px;
+        display: block;
+        visibility: visible;
+}
+
+    .main {
+        max-width: 725px;
+        left: 15px;
+    }
+
+    .about {
+        font-size: 20px;
+    }
+
+    .main-title {
+        max-width: 725px;
+        font-size: 60px;
+    }
+
+    .projects {
+        box-sizing: border-box;
+        padding-top: 150px;
+        width: 100%;
+        max-width: 1150px;
+
+        padding-left: 15px;
+        padding-right: 15px;
+}
+
+    .projects__title {
+        font-size: 45px;
+        letter-spacing: -1.35px;
+        margin-bottom: 53px;
+    }
+
+    .project__card-metrika {
+        background-size: contain;
+        border-radius: 24px;
+        height: 450px;
+    }
+
+    .project__card-nothing {
+        background-size: contain;
+        border-radius: 24px;
+        height: 450px;
+    }
+
+    .project__card-toptrip {
+        background-size: contain;
+        border-radius: 24px;
+        height: 450px;
+    }
+
+    .project__label-wrapper {
+        left: 35px;
+        top: 40px;
+        border-radius: 100px;
+        background: #1BFF07;
+        box-sizing: border-box;
+    }
+
+    .project__label {
+
+        padding: 8px 16px;
+
+        font-size: 16px;
+        letter-spacing: -0.5px;
+    }
+
+    .card__title {
+        font-size: 28px;
+
+        left: 40px;
+        bottom: 76px;
+        letter-spacing: -0.84px;
+
+        margin-bottom: 5px;
+    }
+
+    .card__description {
+        font-size: 24px;
+
+        left: 40px;
+        bottom: 40px;
+
+        letter-spacing: -0.72px;
+    }
+
+    .projects__button {
+        width: 460px;
+        height: 125px;
+
+        border-radius: 10px;
+        margin-top: 80px;
+    }
+
+    .projects-button__link {
+        font-size: 24px;
+        letter-spacing: -0.72px;
+
+        width: 100%;
+
+        padding-top: 50px;
+    }
+
+    .competencies {
+        box-sizing: border-box;
+        max-width: 1000px;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .competencies__cards {
+        gap: 35px;
+
+        justify-content: space-between;
+    }
+
+    .competencies__title {
+        font-size: 45px;
+        letter-spacing: -1.35px;
+        margin-bottom: 60px;
+    }
+
+    .competencies__card {
+        width: 430px;
+    }
+
+    .competencies-card__title {
+        font-size: 28px;
+        letter-spacing: -0.84px;
+    }
+
+    .competencies-card__descripton {
+        font-size: 18px;
+        letter-spacing: -0.54px;
+    }
+
+    .competencies-card__descriptonーuniq {
+        margin-top: 45px;
+    }
+
+    .html::before {
+        width: 35px;
+        height: 35px;
+    }
+
+    .js::before {
+        width: 35px;
+        height: 35px;
+    }
+
+    .lib::before {
+        width: 35px;
+        height: 35px;
+    }
+
+    .adaptive::before {
+        width: 35px;
+        height: 35px;
+    }
+
+    .services {
+        box-sizing: border-box;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .service__title {
+        width: 403px;
+        margin-bottom: 60px;
+
+        font-size: 28px;
+        letter-spacing: -0.85px;
+    }
+
+    .service__card {
+        margin-bottom: 30px;
+    }
+
+    .service__card:nth-last-child(1) {
+        margin-bottom: 110px;
+    }
+
+    .service-card__image {
+        height: 160px;
+        width: 100%;
+        max-width: 1150px;
+    }
+
+    .service__text {
+        border-radius: 25px;
+
+        width: 100%;
+        max-width: 1150px;
+        height: 230px;
+
+        padding-left: 32px;
+        padding-top: 32px;
+        padding-right: 42px;
+    }
+
+    .service-text__title {
+        font-size: 45px;
+        letter-spacing: -1.35px;
+        line-height: 50px;
+        max-width: 390px;
+    }
+
+    .servce-text__description {
+        font-size: 18px;
+        letter-spacing: -0.54px;
+
+        line-height: normal;
+        max-width: 425px;
+    }
+
+    .contacts {
+        height: 485px;
+    }
+
+    .contacts__block {
+        padding-left: 50px;
+        padding-top: 50px;
+    }
+
+    .contacts__title {
+        font-size: 40px;
+        max-width: 370px;
+        height: 120px;
+        letter-spacing: -1.2px;
+        line-height: 40.5px;
+    }
+
+    .contacts__form {
+        gap: 15px;
+    }
+
+    .form-name {
+        padding-left: 25px;
+        max-width: 380px;
+        height: 40px;
+
+        font-size: 16px;
+    }
+
+    .form-email {
+        padding-left: 25px;
+        max-width: 380px;
+        height: 40px;
+
+        font-size: 16px;
+    }
+
+    .contacts__form-btn {
+        width: 300px;
+        height: 50px;
+        margin-top: 40px;
+        border-radius: 7px;
+
+        font-size: 16px
+    }
+
+    .contacts__image {
+        width: 480px;
+        height: 480px;
+    }
+
+    .footer {
+        padding-left: 40px;
+        padding-top: 50px;
+    }
+
+    .footer__info {
+        max-width: 370px;
+        margin-bottom: 20px;
+    }
+
+    .footer__title {
+        margin-bottom: 40px;
+        font-size: 16px;
+    }
+
+    .footer__description {
+        font-size: 14px;
+    }
+
+    .footer__links {
+        max-width: 190px;
+    }
+
+    .footer__links-list {
+        gap: 14px;
+    }
+
+    .footer__link {
+        font-size: 16px;
+    }
+
+    .footer__links-text {
+        letter-spacing: -0.42px;
+        font-size: 14px;
+        margin-top: 45px;
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 960px) {
+    .main {
+        max-width: 365px;
+        left: 10px;
+        height: 310px;
+    }
+
+    .bg-guy {
+        height: 715px;
+        background-image: url(../resources/bg-guy_adaptive.png);
+    }
+
+    .about {
+        font-size: 15px;
+        height: 105px;
+        max-width: 310px;
+        min-width: 275px;
+        width: 100%;
+
+        margin-bottom: 10px;
+    }
+
+    .main-title {
+        max-width: 350px;
+        min-width: 300px;
+        width: 100%;
+        font-size: 40px;
+        height: 205px;
+
+        letter-spacing: -1.2px;
+        line-height: 47px;
+    }
+
+    .projects {
+        padding-top: 100px;
+        width: 100%;;
+
+        padding-left: 15px;
+        padding-right: 15px;
+}
+
+    .projects__title {
+        width: 260px;
+        font-size: 30px;
+        letter-spacing: -0.9px;
+        margin-bottom: 35px;
+    }
+
+    .project__card-metrika {
+        background-size: cover;
+        background-position: left;
+    }
+
+    .project__card-nothing {
+        background-size: cover;
+        background-position: left;
+    }
+
+    .project__card-toptrip {
+        background-size: cover;
+        background-position: left;
+    }
+
+    .project__label-wrapper {
+        left: 30px;
+        top: 30px;
+    }
+
+    .project__label {
+
+        padding: 7px 13px;
+
+        font-size: 13px;
+        letter-spacing: -0.4px;
+    }
+
+    .card__title {
+        font-size: 28px;
+
+        left: 35px;
+        bottom: 75px;
+    }
+
+    .card__description {
+        font-size: 16px;
+
+        left: 35px;
+        bottom: 50px;
+
+        letter-spacing: -0.72px;
+    }
+
+    .projects__button {
+        min-width: 350px;
+        width: 100%;
+        height: 80px;
+
+        border-radius: 8px;
+        margin-top: 60px;
+    }
+
+    .projects-button__link {
+        font-size: 18px;
+        letter-spacing: -0.54px;
+
+        width: 100%;
+
+        padding-top: 30px;
+    }
+
+    .competencies {
+        margin-bottom: 100px;
+    }
+
+    .competencies__cards {
+        gap: 60px;
+    }
+
+    .competencies__title {
+        font-size: 40px;
+        letter-spacing: -1.35px;
+        margin-bottom: 60px;
+    }
+
+    .competencies__card {
+        width: 345px;
+    }
+
+    .competencies-card__descriptonーuniq {
+        margin-top: 15px;
+    }
+
+    .services {
+        box-sizing: border-box;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .service__title {
+        width: 100%;
+    }
+
+    .service__card {
+        margin-bottom: 60px;
+    }
+
+    .service__card:nth-last-child(1) {
+        margin-bottom: 100px;
+    }
+
+    .service-card__image {
+        height: 225px;
+        width: 100%;
+        max-width: 960px;
+        border-radius: 25px;
+    }
+
+    .service__text {
+        box-sizing: border-box;
+
+        flex-wrap: wrap;
+        row-gap: 15px;
+
+        border-radius: 25px;
+        height: 100%;
+        width: 100%;
+        min-width: 350px;
+
+        padding-left: 20px;
+        padding-top: 15px;
+        padding-right: 20px;
+        padding-bottom: 65px;
+    }
+
+    .service-text__title {
+        font-size: 35px;
+        letter-spacing: -1.05px;
+        line-height: 38px;
+        width: 285px;
+    }
+
+    .servce-text__description {
+        font-size: 18px;
+        letter-spacing: -0.54px;
+
+        line-height: normal;
+        max-width: 425px;
+    }
+
+    .contacts {
+        height: 485px;
+    }
+
+    .contacts__block {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 50px;
+    }
+
+    .contacts__title {
+        font-size: 35px;
+        max-width: 310px;
+        height: 120px;
+        letter-spacing: -1.2px;
+        line-height: 40.5px;
+    }
+
+    .contacts__form {
+        gap: 15px;
+    }
+
+    .contacts__form-name {
+        width: 100%;
+    }
+
+    .contacts__form-email {
+        width: 100%;
+    }
+
+    .form-name {
+        padding-left: 25px;
+        max-width: 345px;
+        height: 40px;
+
+        font-size: 16px;
+    }
+
+    .form-email {
+        padding-left: 25px;
+        max-width: 345px;
+        height: 40px;
+
+        font-size: 16px;
+    }
+
+    .contacts__form-btn {
+        width: 100%;
+        height: 50px;
+        margin-top: 40px;
+        border-radius: 7px;
+
+        font-size: 16px
+    }
+
+    .contacts__image {
+        display: none;
+        visibility: hidden;
+    }
+
+    .footer {
+        flex-direction: column;
+        padding-left: 15px;
+        padding-top: 45px;
+    }
+
+    .footer__info {
+        max-width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .footer__title {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .footer__description {
+        font-size: 14px;
+    }
+
+    .footer__links {
+        max-width: 190px;
+    }
+
+    .footer__links-list {
+        gap: 14px;
+    }
+
+    .footer__link {
+        font-size: 16px;
+    }
+
+    .footer__links-text {
+        letter-spacing: -0.42px;
+        font-size: 14px;
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-bottom: 35px;
+    }
 }
