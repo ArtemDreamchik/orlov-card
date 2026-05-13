@@ -225,6 +225,7 @@ body {
 }
 
 .projects-button__link {
+    height: 150px;
     display: block;
     box-sizing: border-box;
     text-decoration: none;
@@ -840,6 +841,7 @@ body {
     }
 
     .projects-button__link {
+        height: 125px;
         font-size: 24px;
         letter-spacing: -0.72px;
 
