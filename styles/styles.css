@@ -840,6 +840,14 @@ body {
         margin-top: 80px;
     }
 
+       .projects-button__link:hover {
+       color: #1BFF07;
+       background: #000;
+
+       border: 1px solid #1BFF07;
+       border-radius: 10px;
+    }
+
     .projects-button__link {
         height: 125px;
         font-size: 24px;
@@ -1155,12 +1163,21 @@ body {
     }
 
     .projects-button__link {
+        height: 80px;
         font-size: 18px;
         letter-spacing: -0.54px;
 
         width: 100%;
 
         padding-top: 30px;
+    }
+
+    .projects-button__link:hover {
+    color: #1BFF07;
+    background: #000;
+
+    border: 1px solid #1BFF07;
+    border-radius: 10px;
     }
 
     .competencies {
